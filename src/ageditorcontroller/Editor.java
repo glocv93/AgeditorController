@@ -44,19 +44,21 @@ public class Editor {
     }
     
     public void createMap(){
-        int dimension;
+        int dimension1,dimension2;
         while (true) {
-            System.out.println("Ingrese dimensión del mapa");
+            System.out.println("Ingrese la dimension vertical del mapa");
             Scanner scanner = new Scanner(System.in);
-            dimension = scanner.nextInt();
-            if ((dimension >= 4)) break;
+            dimension1 = scanner.nextInt();
+            System.out.println("Ingrese las dimension horizontal del mapa");
+            dimension2 = scanner.nextInt();
+            if ((dimension1 >= 4)&&(dimension2 >= 4)) break;
         }
         
-        Map map= new Map(dimension,dimension);
+        Map map= new Map(dimension1,dimension2);
         System.out.print("Mapa generado es de:");
-        System.out.print(dimension);
+        System.out.print(dimension1);
         System.out.print("x");
-        System.out.print(dimension);
+        System.out.print(dimension2);
         System.out.println();
         Paintor OnlyPainter=new Paintor();
         OnlyPainter.drawMap(map);
