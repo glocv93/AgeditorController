@@ -46,8 +46,11 @@ public class Paintor {
     public void drawMap(Map map){
         this.setWidth(map.getWidth());
         this.setHeight(map.getHeight());
-        this.setX((map.getWidth()*2)-1);
-        this.setY((map.getHeight()*2)-1);
+        int dimension;
+        if(width>height)dimension=width;
+        else            dimension=height;
+        this.setX((dimension*2)-1);
+        this.setY((dimension*2)-1);
         Map isomap=new Map();
         isomap.setWidth(x);
         isomap.setHeight(y);
@@ -90,6 +93,7 @@ public class Paintor {
         //lleno isomap acorde a map
         isomap.setTyle(isoMtyle);
         System.out.println(isomap);
+        System.out.println(map);
         
     }
 }

@@ -345,7 +345,7 @@ public class Editor {
             
              Paintor OnlyPainter=new Paintor();
              OnlyPainter.drawMap(mapa);
-
+             
            
        }
        
